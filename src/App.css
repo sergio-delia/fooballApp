@@ -27,6 +27,7 @@ img {
   margin: 10px 0;
   object-fit: cover;
   border-radius: 15px;
+  box-shadow: 5px 5px 10px #999999;
 }
 
 hr {
@@ -92,7 +93,9 @@ button:hover {
 
 
 img:active{
-  border:2px solid #999;
+  border:1px solid #444444;
+  transition: 0.2s;
+    transform: translateY(-5px);
 }
 
 .row{
@@ -102,6 +105,13 @@ img:active{
 
 .divisore{
   display: none;
+}
+
+img:hover{
+  cursor: pointer;
+  opacity: 0.9;
+  transition: 0.5s;
+  transform: translateY(-7px);
 }
 
 select{
