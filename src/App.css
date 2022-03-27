@@ -116,12 +116,36 @@ img:hover{
 }
 
 select{
-  padding: 17px 30px;
+  padding: 20px 30px;
   margin: 5px 5px;
   border-radius: 50px;
   display: inline;
-  font-size: 20px;
+  font-size: 17px;
   background: transparent;
+  text-transform: uppercase;
+}
+
+.image-title{
+  width: 40px;
+  box-shadow: none;
+}
+
+.image-title:active{
+  border:none;
+}
+
+.image-title:hover{
+  opacity: 1;
+  transform: none;
+}
+
+.p-home{
+  text-transform: uppercase;
+}
+
+.little-text{
+  font-size:13px;
+  margin-top:50px;
 }
 
 @media(max-width:480px){
@@ -133,8 +157,18 @@ select{
   }
   button{
     margin: 5px auto;
+    font-size:14px;
+  }
+  select{
+    font-size:14px;
   }
   h1{
     font-size: 30px;
+  }
+  .p-home{
+    margin-top:20px;
+  }
+  .image-title{
+    width:25px;
   }
 }

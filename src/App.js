@@ -1,7 +1,7 @@
 import './App.css';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
-
+import icona from './icons8-soccer-ball.gif';
 
 
 const squadre = [46,5,800,506,6195,398,12,6574,1038,276,252,1025,410,430,3522,1390,416,749,380,607,];
@@ -226,7 +226,7 @@ if(aggiorna == -1){  if(!labelWin.corretta){
 
   return (
     <div className="App">
-<h1>QUANTE NE SAI SUL CALCIO?</h1>
+<h1>QUANTE NE SAI SUL CALCIO? <img src={icona} className="image-title" /></h1>
 <select onChange={(e)=> setSquadra(e.target.value)}>
 <option value="46">Inter</option>
 <option value="5">Milan</option>
@@ -249,10 +249,11 @@ if(aggiorna == -1){  if(!labelWin.corretta){
 <option value="380">Salernitana</option>
 <option value="607">Venezia</option>
 </select>
-      <button onClick={() => getData(squadra)}>GIOCA CON UNA SOLA SQUADRA</button>
+      <button onClick={() => getData(squadra)}>GIOCA CON UNA SQUADRA</button>
       {(datiSquadra.length>20) && (
       <button onClick={() => ricomincia()}>RICOMINCIA</button>
 )}
+<p className='p-home'>Oppure</p>
 <button onClick={() => getAllData()}>GIOCA CON TUTTA LA SERIE A</button>
 
       {(calciatore && calciatore2) ? (
@@ -283,10 +284,10 @@ if(aggiorna == -1){  if(!labelWin.corretta){
         </div>
       ) : (
         <div>
-<p>Gioca e scopri se sei un vero amante del calcio italiano!</p>
+<p style={{marginTop:"20px"}}>Gioca e scopri se sei un vero amante del calcio italiano!</p>
         </div>
       )}
-
+   <p className='little-text'> <a target="_blank" href="https://icons8.com/icon/IOCQZ9xhxVbg/soccer-ball">Soccer Ball</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></p>
     </div>
   );
 }
