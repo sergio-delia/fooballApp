@@ -1,0 +1,1 @@
+export const XRapidAPIKey = '<inserire chiave API TransferMarket RapidApi>';

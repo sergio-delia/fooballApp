@@ -2,7 +2,7 @@ import './App.css';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import icona from './icons8-soccer-ball.gif';
-
+import {XRapidAPIHost, XRapidAPIKey} from './config';
 
 const squadre = [46,5,800,506,6195,398,12,6574,1038,276,252,1025,410,430,3522,1390,416,749,380,607,];
 const squadreMini = [46,5,800];
@@ -24,6 +24,7 @@ const url = 'https://transfermarket.p.rapidapi.com/clubs/get-squad';
 
 const getAllData = async () => {
   
+  setLabelWin({...labelWin, messaggio:"", corretta:true})
   datiSquadra.length > 0 && setDatiSquadra([]);
   let random = Math.floor(Math.random() * squadre.length);
   const { data } = await axios.get(url, {
@@ -31,7 +32,7 @@ const getAllData = async () => {
     params: {id: squadre[random]},
     headers: {
       'X-RapidAPI-Host': 'transfermarket.p.rapidapi.com',
-      'X-RapidAPI-Key': '4f817f4bb6msh6e032e354e1ae92p1aa27djsncff60d5f250c',
+      'X-RapidAPI-Key': XRapidAPIKey,
       'content-type': 'application/json'
     }
   });
@@ -76,11 +77,12 @@ const getData = async (id) => {
     params: {id: id},
     headers: {
       'X-RapidAPI-Host': 'transfermarket.p.rapidapi.com',
-      'X-RapidAPI-Key': '4f817f4bb6msh6e032e354e1ae92p1aa27djsncff60d5f250c',
+      'X-RapidAPI-Key': XRapidAPIKey,
       'content-type': 'application/json'
     }
   });
 
+  setLabelWin({...labelWin, messaggio:"", corretta:true});
   setDatiSquadra(data.squad);
 
 }
