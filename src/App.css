@@ -101,6 +101,7 @@ img:active{
 .row{
   text-align: center;
   background: transparent;
+  margin: 0;
 }
 
 .divisore{

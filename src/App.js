@@ -226,7 +226,7 @@ if(aggiorna == -1){  if(!labelWin.corretta){
 
   return (
     <div className="App">
-
+<h1>QUANTE NE SAI SUL CALCIO?</h1>
 <select onChange={(e)=> setSquadra(e.target.value)}>
 <option value="46">Inter</option>
 <option value="5">Milan</option>
@@ -253,15 +253,15 @@ if(aggiorna == -1){  if(!labelWin.corretta){
       {(datiSquadra.length>20) && (
       <button onClick={() => ricomincia()}>RICOMINCIA</button>
 )}
-<button onClick={() => getAllData()}>GIOCA CON TUTTE</button>
+<button onClick={() => getAllData()}>GIOCA CON TUTTA LA SERIE A</button>
 
       {(calciatore && calciatore2) ? (
         <div>
          
-          <h1>{labelWin.messaggio}</h1>
+          <h2 style={{fontWeight:"bold"}}>{labelWin.messaggio}</h2>
           <h4>Giuste: {labelWin.giuste} - Record: {record} </h4>
           <hr />
-          <h1>{(maggiore ? 'CHI HA IL VALORE DI MERCATO MAGGIORE?': 'CHI HA IL VALORE DI MERCATO MINORE?')}</h1>
+          <h1>CHI HA IL VALORE DI MERCATO <span style={{color:"red"}}>{(maggiore ? 'MAGGIORE?': 'MINORE?')}</span></h1>
           <hr />
           <div className='row'>
           <div className='col-md-6'> 
@@ -283,7 +283,7 @@ if(aggiorna == -1){  if(!labelWin.corretta){
         </div>
       ) : (
         <div>
-<p>Nessun Dato caricato</p>
+<p>Gioca e scopri se sei un vero amante del calcio italiano!</p>
         </div>
       )}
 
