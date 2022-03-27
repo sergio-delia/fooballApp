@@ -267,17 +267,17 @@ if(aggiorna == -1){  if(!labelWin.corretta){
           <div className='col-md-6'> 
           <h2>{calciatore.name}</h2>
           <img className={labelWin.corretta && (calciatore.giusto ? 'corretta': 'sbagliata')}  src={calciatore.heroImage ?? calciatore.image} onClick={()=> handleSubmit(calciatore.giusto,1)} />
-         
+  {(1==2) && (       
           <h5>{calciatore.giusto ? 'Giusto' : 'Non giusto'} - {calciatore.marketValue.value}</h5>
-         
+  )}       
         </div>
         <div className='col-md-6'> 
         <hr className='divisore'/> 
           <h2>{calciatore2.name}</h2>
           <img className={labelWin.corretta && (calciatore2.giusto ? 'corretta': 'sbagliata')} src={calciatore2.heroImage ?? calciatore2.image} onClick={() => handleSubmit(calciatore2.giusto,2)} />
-  
+  {(1==2) && (
           <h5>{calciatore2.giusto ? 'Giusto' : 'Non giusto'} - {calciatore2.marketValue.value}</h5>
-  
+  )}
           </div>
         </div>
         </div>
